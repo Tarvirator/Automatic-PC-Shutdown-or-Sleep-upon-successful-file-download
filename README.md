@@ -1,8 +1,8 @@
-#Purpose
+# Purpose
 If you want to download a large file unattened but don't want to keep you pc turned on for a long time even after the download finishes this simple python code can come in very handy.
 #instructions to use
 
-##This code can easuily be run from the terminal 
+## This code can easuily be run from the terminal 
 
 * open a terminal
 * change the directory to the location of the Main.py.
