@@ -1,11 +1,11 @@
 import os
 import time
 
-file_name='Main.ipynb' #Name of the file that is being downloaded
+file_name='Min.ipynb' #Name of the file that is being downloaded
 path="C:\\Users\\User\\Downloads" #Download folder path
 
 
-def find(file_name, path): #this function retiurns True/False based on the existence of the file
+def watch_file(file_name, path): #this function retiurns True/False based on the existence of the file
     for root, dirs, files in os.walk(path):
         if file_name in files:
             return True
@@ -13,8 +13,8 @@ def find(file_name, path): #this function retiurns True/False based on the exist
             return False
 
 while True:
-    x=find(file_name, path)
-    print("code is checking for the file.")
+    x=watch_file(file_name, path)
+    print("Checking for the file: Not found")
     time.sleep(5)
     if(x):
         print("file found....\nshutting down")
@@ -22,5 +22,5 @@ while True:
     else:
         continue
     
-shutdown_time=30 #Number of seconds before shutdown and after download completes
+shutdown_time=30 #Buffer time(seconds) between download completion and shutdown 
 os.system(f'shutdown /s /t {shutdown_time}')
