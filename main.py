@@ -1,19 +1,19 @@
 import os
 import time
 
-name='Main.ipynb' #Name of the file that is being downloaded
+file_name='Main.ipynb' #Name of the file that is being downloaded
 path="C:\\Users\\User\\Downloads" #Download folder path
 
 
-def find(name, path): #this function retiurns True/False based on the existence of the file
+def find(file_name, path): #this function retiurns True/False based on the existence of the file
     for root, dirs, files in os.walk(path):
-        if name in files:
+        if file_name in files:
             return True
         else:
             return False
 
 while True:
-    x=find(name, path)
+    x=find(file_name, path)
     print("code is checking for the file.")
     time.sleep(5)
     if(x):
